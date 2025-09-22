@@ -2,8 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/api/audit-sites/[filename]": "pages/api/audit-sites/[filename].js",
   "/": "pages/index.js",
-  "/api/audit": "pages/api/audit.js",
-  "/api/files": "pages/api/files.js",
-  "/api/audit-sites": "pages/api/audit-sites.js"
+  "/api/audit": "pages/api/audit.js"
 }
