@@ -1,0 +1,25 @@
+{
+    "base": "https://unitedseeds.com",
+    "paths": [
+        "/",
+        "/collections/all",
+        "/collections",
+        "/pages/our-story",
+        "/pages/product-quiz",
+        "/pages/area-calculator",
+        "/pages/wholesale-registration-form",
+        "/pages/crp-request-form",
+        "/pages/resources",
+        "/blogs/seeds",
+        "/pages/contact",
+        "/policies/terms-of-service",
+        "/policies/privacy-policy",
+        "/policies/shipping-policy",
+        "/policies/refund-policy",
+        "/collections/kentucky-bluegrass",
+        "/products/365ss-kentucky-bluegrass",
+        "/account/register",
+        "/account/addresses",
+        "/account"
+    ]
+}

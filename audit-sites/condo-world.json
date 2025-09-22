@@ -1,0 +1,21 @@
+{
+    "base": "https://www.staging.condo-world.com",
+    "paths": [
+        "/",
+        "/north-myrtle-beach/units/ashworth-1402?doa=03-01-2026&dod=03-31-2026&winter=true",
+        "/north-myrtle-beach/rentals/ashworth",
+        "/north-myrtle-beach/travel-guides/sos-north-myrtle-beach",
+        "/myrtle-beach",
+        "/reservation-policy",
+        "/north-myrtle-beach/rental-management",
+        "/faq",
+        "/team",
+        "/contact",
+        "/webcam",
+        "/north-myrtle-beach/condos",
+        "/north-myrtle-beach/winter-rentals",
+        "/north-myrtle-beach/search_winter-rentals?doa=March%201,%202026&dod=March%2031,%202026&winter=true",
+        "/search?lo=North%20Myrtle%20Beach&doa=9/24/2025&dod=9/30/2025&resort=Ashworth&showAll=true",
+        "/booking?doa=9-24-2025&dod=9-30-2025&adults=1&children=0&pets=false&city=north-myrtle-beach&unit=ashworth-107&bedrooms=3&companyId=1&cityName=North+Myrtle+Beach&resortId=2&unitName=AshWorth+-+107&unitId=369&unitSlug=ashworth-107"
+    ]
+}

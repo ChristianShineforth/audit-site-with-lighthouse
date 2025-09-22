@@ -20,11 +20,21 @@ const configs = [
 const baseURL = config.base;
 const pathnames = config.paths
 
-const outputDir = path.join(__dirname, 'reports');
+const now = new Date();
+const dateFolder = `performance-${now.getFullYear().toString().slice(-2)}-${now.getMonth() + 1}-${now.getDate()}`;
+const outputDir = path.join(__dirname, 'reports', dateFolder);
 
 
 async function runLighthouse(url, configName, configOverrides) {
-  const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless'] });
+  const chrome = await chromeLauncher.launch({
+    chromeFlags: [
+      '--headless',
+      '--incognito',
+      '--disable-extensions',
+      '--no-first-run',
+      '--no-default-browser-check'
+    ]
+  });
   const options = {
     logLevel: 'info',
     output: ['html', 'json'],
@@ -32,7 +42,12 @@ async function runLighthouse(url, configName, configOverrides) {
     port: chrome.port,
     emulatedFormFactor: configOverrides.formFactor,
     screenEmulation: configOverrides.screenEmulation,
-    userAgent: configOverrides.emulatedUserAgent
+    throttlingMethod: 'provided',
+    throttling: {
+      rttMs: 0, throughputKbps: 0, cpuSlowdownMultiplier: 1,
+      requestLatencyMs: 0, downloadThroughputKbps: 0, uploadThroughputKbps: 0
+    },
+    disableStorageReset: true,
   };
 
   const result = await lighthouse(url, options);
@@ -43,7 +58,7 @@ async function runLighthouse(url, configName, configOverrides) {
   const filename = `${pathnameSlug}-${configName}-${timestamp}`;
   const basePath = path.resolve(outputDir, filename);
 
-  if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
+  if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, {recursive: true});
 
   fs.writeFileSync(`${basePath}.html`, result.report[0]);
 

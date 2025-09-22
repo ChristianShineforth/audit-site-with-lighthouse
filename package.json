@@ -4,14 +4,28 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Lighthouse Audit Web Application",
   "dependencies": {
+    "@vercel/blob": "^2.0.0",
     "chrome-launcher": "^1.1.2",
-    "lighthouse": "^12.5.1"
+    "formidable": "^3.5.1",
+    "lighthouse": "^12.5.1",
+    "multer": "^1.4.5-lts.1",
+    "next": "^15.1.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
   }
 }

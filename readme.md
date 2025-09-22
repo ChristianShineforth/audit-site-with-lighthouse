@@ -1,7 +1,7 @@
 READ ME:
 
 Who's tired of going to a site to run lighthouse and wait for the lighthouse information?
-Not to mention you have to manuallyrepeat the same process for different pathnames and wait
+Not to mention you have to manually repeat the same process for different pathnames and wait
 
 Now you don't have to do that anymore.
 
